@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karate Club</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        /* MENU */
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e00000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e00000;
+        }
+
+        /* ACCUEIL */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+                url("https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e00000;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #b00000;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #e00000;
+        }
+
+        /* HORAIRES */
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            background: white;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #111;
+            color: white;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #111;
+            color: white;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="logo">
+            KARATE <span>CLUB</span>
+        </div>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#club">Le club</a>
+            <a href="#horaires">Horaires</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- ACCUEIL -->
+    <section class="hero" id="accueil">
+        <div>
+            <h1>🥋 KARATE CLUB</h1>
+            <p>Force • Discipline • Respect</p>
+
+            <a href="#contact" class="button">
+                Nous contacter
+            </a>
+        </div>
+    </section>
+
+
+    <!-- CLUB -->
+    <section id="club">
+
+        <h2>Notre club</h2>
+
+        <p>
+            Bienvenue dans notre club de karaté !
+            Nous accueillons les débutants comme les pratiquants expérimentés.
+        </p>
+
+        <br>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🥋 Karaté</h3>
+                <p>
+                    Apprenez les techniques du karaté,
+                    les katas et le combat.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💪 Discipline</h3>
+                <p>
+                    Développez votre concentration,
+                    votre confiance et votre maîtrise de soi.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Respect</h3>
+                <p>
+                    Le respect des autres est au cœur
+                    de notre pratique.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HORAIRES -->
+    <section id="horaires">
+
+        <h2>Horaires des entraînements</h2>
+
+        <table>
+
+            <tr>
+                <th>Jour</th>
+                <th>Horaire</th>
+                <th>Niveau</th>
+            </tr>
+
+            <tr>
+                <td>Lundi</td>
+                <td>18h00 - 19h30</td>
+                <td>Débutants</td>
+            </tr>
+
+            <tr>
+                <td>Mercredi</td>
+                <td>18h00 - 20h00</td>
+                <td>Tous niveaux</td>
+            </tr>
+
+            <tr>
+                <td>Samedi</td>
+                <td>10h00 - 12h00</td>
+                <td>Compétition</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Contact</h2>
+
+        <p>📍 Adresse : À compléter</p>
+
+        <p>📞 Téléphone : À compléter</p>
+
+        <p>📧 Email : À compléter</p>
+
+        <br>
+
+        <a href="mailto:contact@karateclub.fr" class="button">
+            Envoyer un email
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Karate Club - Tous droits réservés</p>
+    </footer>
+
+
+    <script>
+        // Petit message quand on clique sur le bouton
+        console.log("Bienvenue sur le site du Karate Club 🥋");
+    </script>
+
+</body>
+</html>
